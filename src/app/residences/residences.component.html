@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <h2>Liste des Residences </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listResidences">
+        <td>{{ user.name }}</td>
+        <td><img [src]="user.image" alt="Image" height="50"></td>
+        <td>
+          <button type="button" class="my-button" (click)="ShowApartment(user.id)">Show Apartment!</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        <div *ngIf="showNotification && list.length > 0" class ="notification-popup">
+        <ul>
+          <button type="button" class="cancel-button" (click)="cancel()">X</button>
+          <li *ngFor="let user of list">
+            {{ user.appartNum }}
+          </li>
+        </ul>
+
+      </div>
+      <ng-template #noApartments>
+        <p>No apartments available.</p>
+      </ng-template>
+</body>
+</html>

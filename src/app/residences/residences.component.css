@@ -1,0 +1,63 @@
+ul {
+  font-family: Arial, sans-serif;
+}
+
+/* Define the font for the list items */
+
+li {
+  font-family: Verdana, sans-serif;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: 100px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain the aspect ratio and cover the container */
+  margin-right: 10px; /* Adjust as needed to provide spacing between image and text */
+}
+  /* Add your CSS styles here */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* Add this to your CSS file */
+.notification-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 30%;
+  height: 15%;
+  overflow-y: auto; /* Add a scrollbar if content exceeds the height */
+
+}
+.cancel-button {
+  position: absolute;
+  background-color: #ff5252; /* Red background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  top: 5px; /* Adjust as needed to position vertically */
+  right: 5px; /* Adjust as needed to position horizontally */
+
+}
+
+.cancel-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
