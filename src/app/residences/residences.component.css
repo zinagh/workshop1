@@ -61,3 +61,37 @@ img {
 .cancel-button:hover {
   background-color: #e53935; /* Darker red on hover */
 }
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* styles.css or styles.scss */
+
+.like-button {
+  background: #e44d26; /* Button background color */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff; /* Button text color */
+  padding: 2px 2px; /* Adjust padding for better appearance */
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 5px; /* Add rounded corners for a softer look */
+}
+
+.like-button:hover {
+  background: #c0392b; /* Change background color on hover */
+}
+
+.like-button i {
+  margin-right: 5px; /* Add some spacing between the icon and text */
+}
+.user-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust spacing between user.appartNum and the Like button */
+.user-container .like-button {
+  margin-left: 10px;
+}

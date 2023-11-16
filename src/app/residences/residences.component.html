@@ -3,10 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 <body>
 
   <h2>Liste des Residences </h2>
+  <label for="surfaceInput">Filtrer les appartements par Surface :</label>
+  <input type="number" id="surfaceInput" [(ngModel)]="surfaceprop">
+  <button type="button" (click)="submitSurface()">Submit</button>
+
 
   <table>
     <thead>
@@ -27,11 +32,17 @@
     </tbody>
   </table>
 
+
         <div *ngIf="showNotification && list.length > 0;" class ="notification-popup">
         <ul>
           <button type="button" class="cancel-button" (click)="cancel()">X</button>
           <li *ngFor="let user of list">
+            <div class="user-container">
             {{ user.appartNum }}
+            <button type="button" class="like-button" (click)="addFav(user)">
+              <i class="far fa-heart"></i> Like
+          </button>
+        </div>
           </li>
         </ul>
 
@@ -39,5 +50,38 @@
           <div *ngIf="showNotification && list.length === 0" class="notification-popup">
             <p>No apartments available.</p>
           </div>
+
+
+          <h2 *ngIf="!showBasedOnSurfaces;">Liste des appartements aux favoris </h2>
+          <h2 *ngIf="showBasedOnSurfaces">Liste des appartements ayant la surface {{surfaceprop }} m2 </h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Appartment Number</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="showBasedOnSurfaces; else showFav">
+              <tr *ngFor="let user of apartementBasedOnSurfaces">
+                <td>{{ user.id }}</td>
+                <td>{{ user.appartNum }}</td>
+                <td>{{ user.category }}</td>
+
+              </tr>
+            </tbody>
+
+            <ng-template #showFav>
+              <tbody *ngIf="!showBasedOnSurfaces">
+                <tr *ngFor="let user of listFav">
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.appartNum }}</td>
+                  <td>{{ user.category }}</td>
+                </tr>
+              </tbody>
+            </ng-template>
+
+          </table>
         </body>
       </html>

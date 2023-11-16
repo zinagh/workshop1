@@ -1,13 +1,18 @@
+import { Apartment } from './../Core/Models/apartment';
 import { Component , ElementRef, HostListener} from '@angular/core';
 import { Residence } from '../Core/Models/residence';
-import { Apartment } from '../Core/Models/apartment';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+
 
 @Component({
   selector: 'app-residences',
   templateUrl: './residences.component.html',
   styleUrls: ['./residences.component.css']
 })
+
 export class ResidencesComponent {
+  showBasedOnSurfaces: boolean = false;
   showNotification: boolean = false;
   listResidences:Residence[]=[
   {id:1,"name": "El fel","address":"Borj Cedria",
@@ -36,6 +41,25 @@ export class ResidencesComponent {
   cancel() {
     this.showNotification = false;
   }
+  listFav : Apartment[] = [];
+  addFav(user: Apartment): void {
+    this.listFav.push(user);
+    console.log(this.listFav);
+  }
+
+  surfaceprop: number = 0;
+  apartementBasedOnSurfaces: Apartment[] = [];
+
+  submitSurface(): void {
+    this.apartementBasedOnSurfaces = this.listApartments.filter(
+      (appart: Apartment) => appart.surface === this.surfaceprop
+    );
+    console.log(this.surfaceprop);
+    console.log(this.apartementBasedOnSurfaces);
+    this.showBasedOnSurfaces = true;
+  }
+
+
 
 };
 
