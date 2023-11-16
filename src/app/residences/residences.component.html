@@ -27,7 +27,7 @@
     </tbody>
   </table>
 
-        <div *ngIf="showNotification && list.length > 0" class ="notification-popup">
+        <div *ngIf="showNotification && list.length > 0;" class ="notification-popup">
         <ul>
           <button type="button" class="cancel-button" (click)="cancel()">X</button>
           <li *ngFor="let user of list">
@@ -36,8 +36,8 @@
         </ul>
 
       </div>
-      <ng-template #noApartments>
-        <p>No apartments available.</p>
-      </ng-template>
-</body>
-</html>
+          <div *ngIf="showNotification && list.length === 0" class="notification-popup">
+            <p>No apartments available.</p>
+          </div>
+        </body>
+      </html>
