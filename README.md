@@ -1,27 +1,13 @@
-# Workshop1
+# Workshop1 - Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+## Overview
 
-## Development server
+Welcome to Workshop1, an Angular project focused on managing residences and apartments. This project serves as a learning experience for mastering frontend development with Angular. The key technical aspects covered include Angular data bindings, Angular forms, and fetching/displaying content. Bootstrap is also integrated to enhance the project's styling.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Residences Management:** Add, edit, and delete residences.
+- **Apartments Management:** Manage apartments within each residence.
+- **Angular Data Bindings:** Utilize two-way data bindings for seamless interaction.
+- **Angular Forms:** Implement forms for user input and data manipulation.
+- **Bootstrap Integration:** Enhance the project's visual appeal and responsiveness using Bootstrap.
