@@ -1,1 +1,27 @@
-<p>apartments-component works!</p>
+<h2>Liste des appartements de la résidence {{ residenceId }} </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>appartNum</th>
+        <th>floorNum</th>
+        <th>surface</th>
+        <th>terrace</th>
+        <th>surfaceTerrace</th>
+        <th>category</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let app of filteredApartments">
+        <td>{{ app.appartNum }}</td>
+        <td>{{ app.floorNum }}</td>
+        <td>{{ app.surface }}</td>
+        <td>{{ app.terrace }}</td>
+        <td>{{ app.surfaceTerrace }}</td>
+        <td>{{ app.category }}</td>
+        <td>{{ app.description }}</td>
+
+      </tr>
+    </tbody>
+  </table>

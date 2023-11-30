@@ -3,6 +3,7 @@ import { Component , ElementRef, HostListener} from '@angular/core';
 import { Residence } from '../Core/Models/residence';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -59,7 +60,12 @@ export class ResidencesComponent {
     this.showBasedOnSurfaces = true;
   }
 
+  constructor(private router: Router) {}
 
+  navigateToApartments(residenceId: number): void {
+    // Navigate to 'apartments' route with the residence ID as a parameter
+    this.router.navigate(['/apartments', { residenceId: residenceId }]);
+  }
 
 };
 
