@@ -19,6 +19,7 @@
         <th>Nom</th>
         <th>Image</th>
         <th>Action</th>
+        <th>détails</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +28,9 @@
         <td><img [src]="user.image" alt="Image" height="50"></td>
         <td>
           <button type="button" class="my-button" (click)="ShowApartment(user.id)">Show Apartment!</button>
+        </td>
+        <td>
+          <button type="button" class="my-button" (click)="ShowApartment(user.id)">Détails</button>
         </td>
       </tr>
     </tbody>

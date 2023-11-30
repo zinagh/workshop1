@@ -1,0 +1,11 @@
+/* not-found-component.component.css */
+
+.not-found-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #f00; /* Red color for emphasis */
+}
+
