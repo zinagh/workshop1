@@ -1,0 +1,34 @@
+<!-- add-apartment.component.html -->
+<h2>Ajouter un appartement</h2>
+<form (submit)="onSubmit()">
+  <label for="appartNum">AppartNum:</label>
+  <input type="number" id="appartNum">
+
+  <label for="floorNum">FloorNum:</label>
+  <input type="number" id="floorNum">
+
+  <label for="surface">Surface:</label>
+  <input type="number" id="surface">
+
+  <label for="terrace">Terrace:</label>
+  <select id="terrace">
+    <option>Oui</option>
+    <option>Non</option>
+  </select>
+
+  <label for="surfaceTerrace">SurfaceTerrace:</label>
+  <input type="number" id="surfaceTerrace" required>
+
+  <label for="category">Category:</label>
+  <input type="text" id="category" required>
+
+  <label for="description">Description:</label>
+  <input type="text" id="description" required>
+
+  <button type="submit">Add Apartment</button>
+</form>
+
+<!-- Display success message when an apartment is added -->
+<div *ngIf="apartmentAdded">
+  Apartment added successfully!
+</div>

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-residence-component.component.css']
 })
 export class FormResidenceComponentComponent {
-
+  residenceAdded: boolean = false;
+  onSubmit(): void {
+    this.residenceAdded = true;
+  }
 }

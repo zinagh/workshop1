@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Apartment } from '../Core/Models/apartment';
-import { Residence } from '../Core/Models/residence';
+import { Apartment } from '../../Core/Models/apartment';
+import { Residence } from '../../Core/Models/residence';
 @Component({
   selector: 'app-apartments-component',
   templateUrl: './apartments-component.component.html',

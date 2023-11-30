@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ResidencesComponent } from './residences/residences.component';
+import { ResidencesComponent } from './components/residences/residences.component';
 import { FormsModule } from '@angular/forms';
-import { FormResidenceComponentComponent } from './form-residence-component/form-residence-component.component';
-import { ApartmentsComponentComponent } from './apartments-component/apartments-component.component';
-import { FormApartmentComponentComponent } from './form-apartment-component/form-apartment-component.component';
-import { NotFoundComponentComponent } from './not-found-component/not-found-component.component'; // Import FormsModule
+import { FormResidenceComponentComponent } from './components/form-residence-component/form-residence-component.component';
+import { ApartmentsComponentComponent } from './components/apartments-component/apartments-component.component';
+import { FormApartmentComponentComponent } from './components/form-apartment-component/form-apartment-component.component';
+import { NotFoundComponentComponent } from './components/not-found-component/not-found-component.component'; // Import FormsModule
 import { Routes, RouterModule } from '@angular/router';
-import { DetailAppartmentComponentComponent } from './detail-appartment-component/detail-appartment-component.component';
+import { DetailAppartmentComponentComponent } from './components/detail-appartment-component/detail-appartment-component.component';
 
 const routes: Routes = [
   { path: 'home', component: ResidencesComponent },

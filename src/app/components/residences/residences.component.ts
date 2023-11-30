@@ -1,6 +1,6 @@
-import { Apartment } from './../Core/Models/apartment';
+import { Apartment } from '../../Core/Models/apartment';
 import { Component , ElementRef, HostListener} from '@angular/core';
-import { Residence } from '../Core/Models/residence';
+import { Residence } from '../../Core/Models/residence';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { Router } from '@angular/router';
