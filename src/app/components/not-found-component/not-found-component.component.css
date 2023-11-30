@@ -9,3 +9,8 @@ h1 {
   color: #f00; /* Red color for emphasis */
 }
 
+img
+{
+  width: 1000px;
+  height: 700px;
+}
