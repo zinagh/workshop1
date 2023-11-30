@@ -10,6 +10,7 @@
         <th>surfaceTerrace</th>
         <th>category</th>
         <th>description</th>
+        <th>Détails</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +22,11 @@
         <td>{{ app.surfaceTerrace }}</td>
         <td>{{ app.category }}</td>
         <td>{{ app.description }}</td>
-
+        <td>
+          <button type="button" class="my-button" (click)="navigateToDetailsApartments(app.id)">Détails</button>
+        </td>
       </tr>
     </tbody>
   </table>
+  <button type="button" class="my-button" (click)="navigateToaddApartments()">Add Apartment</button>
+

@@ -10,6 +10,7 @@ import { ApartmentsComponentComponent } from './apartments-component/apartments-
 import { FormApartmentComponentComponent } from './form-apartment-component/form-apartment-component.component';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component'; // Import FormsModule
 import { Routes, RouterModule } from '@angular/router';
+import { DetailAppartmentComponentComponent } from './detail-appartment-component/detail-appartment-component.component';
 
 const routes: Routes = [
   { path: 'home', component: ResidencesComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'apartments', component: ApartmentsComponentComponent },
   { path: 'form-apartment', component: FormApartmentComponentComponent },
   { path: 'not-found', component: NotFoundComponentComponent },
+  { path: 'detailsapp', component: DetailAppartmentComponentComponent },
   { path: '**', redirectTo: '/not-found' } // Redirect any unknown route to the not-found component
 ];
 
@@ -28,7 +30,8 @@ const routes: Routes = [
     FormResidenceComponentComponent,
     ApartmentsComponentComponent,
     FormApartmentComponentComponent,
-    NotFoundComponentComponent
+    NotFoundComponentComponent,
+    DetailAppartmentComponentComponent
   ],
   imports: [
     BrowserModule,

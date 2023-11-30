@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Apartment } from '../Core/Models/apartment';
 import { Residence } from '../Core/Models/residence';
 @Component({
@@ -9,7 +9,7 @@ import { Residence } from '../Core/Models/residence';
 })
 export class ApartmentsComponentComponent {
   residenceId!: number;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -38,6 +38,17 @@ export class ApartmentsComponentComponent {
 
   private filterApartmentsByResidenceId(residenceId: number): Apartment[] {
     return this.listApartments.filter(apartment => apartment.residence.id === residenceId);
+  }
+
+  navigateToaddApartments(): void {
+    // Navigate to 'apartments' route with the residence ID as a parameter
+    this.router.navigate(['/form-apartment']);
+  }
+
+
+  navigateToDetailsApartments(appId: number): void {
+    // Navigate to 'apartments' route with the residence ID as a parameter
+    this.router.navigate(['/detailsapp', { appId: appId }]);
   }
 
 
